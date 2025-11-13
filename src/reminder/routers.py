@@ -12,5 +12,12 @@ async def create_task(
     data: Annotated[ReminderCreate, Depends()],
     db: AsyncSession = Depends(get_db)
 ):
-    reminder = await create_reminder(db, data.text, data.run_at, data.periodic)
+    reminder = await create_reminder(
+        db, 
+        data.text, 
+        data.run_at, 
+        data.periodic, 
+        data.days_of_week, 
+        data.time_of_day
+    )
     return reminder 

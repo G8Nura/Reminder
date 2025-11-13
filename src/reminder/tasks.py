@@ -5,4 +5,3 @@ import time
 @celery.task
 def print_reminder(text:str):
     print(f"[Напоминание] {text}")
-    return True
