@@ -1,8 +1,6 @@
-from pydantic import BaseModel, root_validator
+from pydantic import BaseModel 
 from datetime import datetime, time
-from typing import Optional
-
-from sqlalchemy import values 
+from typing import Optional 
 
 
 class ReminderCreate(BaseModel):
